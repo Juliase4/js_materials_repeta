@@ -28,13 +28,13 @@ if (salary <= 500) {
 
 // Тернарный оператор
 const balance = 1000;
-let message;
+// let message;
 
-if (balance >= 0) {
-    message = 'Позитивный баланс';
-} else {
-    message = 'Негативный баланс';
-}
+// if (balance >= 0) {
+//     message = 'Позитивный баланс';
+// } else {
+//     message = 'Негативный баланс';
+// }
 
 // const message = условие ? выражение1 : выражение2;
 const message = balance >= 0 ? 'Позитивный баланс' : 'Негативный баланс';
@@ -42,3 +42,13 @@ const message = balance >= 0 ? 'Позитивный баланс' : 'Негат
 console.log(message);
 
 // Блочная область видимости переменных
+const b = 10; // глобальная область видимости
+
+if (true) { // в теле - это блочная область видимости
+    console.log(b);
+    const a = 5;
+
+    console.log(a);
+}
+
+console.log(b);
